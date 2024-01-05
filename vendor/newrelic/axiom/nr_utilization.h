@@ -2,11 +2,11 @@
 #define NR_UTILIZATION_HDR
 
 typedef struct _nr_utilization_t {
-  int aws : 1;
-  int azure : 1;
-  int gcp : 1;
-  int pcf : 1;
-  int docker : 1;
+  unsigned int aws : 1;
+  unsigned int azure : 1;
+  unsigned int gcp : 1;
+  unsigned int pcf : 1;
+  unsigned int docker : 1;
 } nr_utilization_t;
 
 static const nr_utilization_t nr_utilization_default = {
