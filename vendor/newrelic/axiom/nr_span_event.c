@@ -5,7 +5,7 @@
 #include "util_memory.h"
 #include "util_strings.h"
 
-nr_span_event_t* nr_span_event_create() {
+nr_span_event_t* nr_span_event_create(void) {
   nr_span_event_t* se;
   se = (nr_span_event_t*)nr_zalloc(sizeof(nr_span_event_t));
   se->type = NR_SPAN_GENERIC;

@@ -9,7 +9,7 @@
 #include "util_memory.h"
 #include "util_strings.h"
 
-char* nr_postgres_default_host() {
+char* nr_postgres_default_host(void) {
   char* host = getenv("PGHOSTADDR");
 
   if (nr_strempty(host)) {
@@ -22,7 +22,7 @@ char* nr_postgres_default_host() {
   return nr_strdup(host);
 }
 
-char* nr_postgres_default_port() {
+char* nr_postgres_default_port(void) {
   char* port_path_or_id = getenv("PGPORT");
 
   if (nr_strempty(port_path_or_id)) {
@@ -37,7 +37,7 @@ char* nr_postgres_default_port() {
   return nr_strdup(port_path_or_id);
 }
 
-char* nr_postgres_default_database_name() {
+char* nr_postgres_default_database_name(void) {
   char* database_name = getenv("PGDATABASE");
 
   if (nr_strempty(database_name)) {
